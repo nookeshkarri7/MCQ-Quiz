@@ -20,8 +20,8 @@ let NextBtn=document.getElementById("Next")
 let scoreDisplay=document.getElementById("scoreDisplay")
 let scoreImg=document.getElementById("scoreImg")
 let displayScoreContainer=document.getElementById("displayScoreContainer")
-
-
+let finalSubmitTestEl=document.getElementById("finalSubmitTest")
+let usernameaftertestEl=document.getElementById("usernameaftertest")
 
 username.addEventListener("blur",(event)=>{
     if (event.target.value==""){
@@ -32,14 +32,16 @@ username.addEventListener("blur",(event)=>{
     }
 })
 
+
 startAssesmentEl.onclick=function(){
     if (username.value==""){
         errmsgEl.textContent="*Required"
-
+        
     }
     else{
         startAssesmentEl.setAttribute("onclick","display('sectionTest')")
         usernameintest.textContent="  Hi  "+username.value 
+        usernameaftertestEl.textContent="  Hi  "+username.value+"... <br>Your Assesement has been completed succesfully"
         //time left counter
         let minutes=9 
         let seconds=60
@@ -154,7 +156,8 @@ let Questions=[
         op3Text.textContent=eachQ.op3
         op4Text.textContent=eachQ.op4
         corectOption=eachQ.correct   
-        submitBtn.setAttribute("onclick","checkAnswer()")    
+        submitBtn.setAttribute("onclick","checkAnswer()") 
+        NextBtn.setAttribute("class","d-none")   
     }
     function checkAnswer(){
         displayScoreContainer.setAttribute("class","mt-3 d-flex flex-row justify-content-center startbtn")
@@ -174,6 +177,7 @@ let Questions=[
             scoreDisplay.textContent=`Your Score ${score}`  
         }
         if (selectedValue==corectOption){
+            NextBtn.setAttribute("class","d-none btn btn-primary ml-4")
             QIndex+=1
             scoreImg.src="/images/correct.jpg"
             score+=1
@@ -181,6 +185,11 @@ let Questions=[
             scoreDisplay.textContent=`Your Score ${score}`
             NextBtn.setAttribute("class","btn btn-primary ml-4")
             submitBtn.setAttribute("onclick","")
+            if (finalScore.score==10){
+                NextBtn.setAttribute("class","d-none")
+                submitBtn.setAttribute("class","d-none")
+                finalSubmitTestEl.setAttribute("class","btn btn-primary")
+            }
         }
         else{
             scoreImg.src="/images/wrong.jpg"
@@ -191,6 +200,7 @@ let Questions=[
     }
 
 
-   
-console.log(finalScore)
+    
+
+
     

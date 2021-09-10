@@ -36,3 +36,21 @@
     font-size: 17px;
     font-weight: bold;
 }
+.round{
+    border-radius: 100px;
+    border-width: 5px;
+    border-style: solid;
+    height: 100px;
+    width: 100px;
+    border-color: #d7e2f5;
+    padding:23px;
+    margin-right: 30px;
+}
+.scoredfinal{
+    color: #1b2b50 ;
+    font-weight: bold;
+    font-size: 30px;
+}
+.Test{
+    text-align: center;
+}
