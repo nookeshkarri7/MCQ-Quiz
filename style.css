@@ -1,0 +1,38 @@
+.headbar{
+    background-color: #ffffff;
+    padding: 10px;
+}
+.headheading{
+    font-size: 16px;
+    color: #1b2b50    ;
+}
+.instructionsContainer{
+    background-color: #fafbfe    ;
+    padding: 30px;
+}
+.instructionscard{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 10px;
+}
+.btncolor{
+    background-color: #ff8323    ;
+    border-width: 0px;
+    color: #ffffff;
+}
+.btncolor:hover{
+    background-color: #ff8323    ;
+    
+}
+#errmsg{
+    color: red;
+}
+.Test{
+    color: #1b2b50;
+    font-size: 18px;
+}
+.timeLeft{
+    color: #1b2b50;
+    font-size: 17px;
+    font-weight: bold;
+}
