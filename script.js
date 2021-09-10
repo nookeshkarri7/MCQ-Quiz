@@ -41,7 +41,7 @@ startAssesmentEl.onclick=function(){
     else{
         startAssesmentEl.setAttribute("onclick","display('sectionTest')")
         usernameintest.textContent="  Hi  "+username.value 
-        usernameaftertestEl.textContent="  Hi  "+username.value+"... <br>Your Assesement has been completed succesfully"
+        usernameaftertestEl.textContent="  Hi  "+username.value+"... Your Assesement has been completed succesfully"
         //time left counter
         let minutes=9 
         let seconds=60
