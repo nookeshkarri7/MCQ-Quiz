@@ -55,6 +55,7 @@ startAssesmentEl.onclick=function(){
             }
             timeLeftEl.textContent=`TIME LEFT ${minutes} : ${seconds}`
         },1000)
+
     }
 }
 
@@ -179,7 +180,7 @@ let Questions=[
         if (selectedValue==corectOption){
             NextBtn.setAttribute("class","d-none btn btn-primary ml-4")
             QIndex+=1
-            scoreImg.src="/images/correct.jpg"
+            scoreImg.src="https://raw.githubusercontent.com/nookeshkarri7/MCQ-Quiz/d34473e7f095786b66c9529767bc50f7eea3af13/images/correct.jpg"
             score+=1
             finalScore.score=score
             scoreDisplay.textContent=`Your Score ${score}`
@@ -192,7 +193,7 @@ let Questions=[
             }
         }
         else{
-            scoreImg.src="/images/wrong.jpg"
+            scoreImg.src="https://raw.githubusercontent.com/nookeshkarri7/MCQ-Quiz/d34473e7f095786b66c9529767bc50f7eea3af13/images/wrong.jpg"
             scoreDisplay.textContent=`Please Select Correct Answer`
             NextBtn.setAttribute("class","d-none btn btn-primary ml-4")
         }
